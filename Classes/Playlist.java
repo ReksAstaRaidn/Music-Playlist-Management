@@ -1,6 +1,6 @@
 package ManajemenPlaylistMusik.Classes;
 
-public class Playlist extends Lagu {
+public class Playlist {
     
     private String namaPlaylist;
 
