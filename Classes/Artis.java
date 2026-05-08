@@ -1,4 +1,4 @@
-package JavaSem2.ManajemenPlaylistMusik;
+package ManajemenPlaylistMusik.Classes;
 
 public class Artis {
     private String namaArtis;

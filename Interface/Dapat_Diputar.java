@@ -1,4 +1,4 @@
-package JavaSem2.ManajemenPlaylistMusik;
+package ManajemenPlaylistMusik.Interface;
 
 public interface Dapat_Diputar {
     
