@@ -1,5 +1,3 @@
-package ManajemenPlaylistMusik.Classes;
-
 public class Lagu {
     
     private String judul;

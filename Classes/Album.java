@@ -1,5 +1,3 @@
-package ManajemenPlaylistMusik.Classes;
-
 public class Album extends Lagu {
     
     private String namaAlbum;

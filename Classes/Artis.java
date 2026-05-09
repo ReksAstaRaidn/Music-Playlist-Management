@@ -1,5 +1,3 @@
-package ManajemenPlaylistMusik.Classes;
-
 public class Artis {
     private String namaArtis;
 
