@@ -1,16 +1,16 @@
 import java.util.ArrayList;
 
 public class Album {
-    
+
     private String nama;
     private String artis;
     private int tahun;
     private ArrayList<Lagu> daftarLagu;
 
     public Album(String nama, String artis, int tahun) {
-        this.nama = nama;
-        this.artis = artis;
-        this.tahun = tahun;
+        this.nama      = nama;
+        this.artis     = artis;
+        this.tahun     = tahun;
         this.daftarLagu = new ArrayList<>();
     }
 
@@ -18,23 +18,23 @@ public class Album {
         daftarLagu.add(lagu);
     }
 
-    //getters
-    public String getNama() {
-        return nama;
-    }
-
-    public String getArtis() {
-        return artis;
-    }
-
-    public int getTahun() {
-        return tahun;
-    }
-
-    public ArrayList<Lagu> getDaftarLagu() {
-        return daftarLagu;
+    // --- Getter ---
+    public String getNama() { 
+        return nama; 
     }
     
+    public String getArtis() { 
+        return artis; 
+    }
+
+    public int    getTahun() { 
+        return tahun; 
+    }
+
+    public ArrayList<Lagu> getDaftarLagu() { 
+        return daftarLagu; 
+    }
+
     public void tampilkan() {
         System.out.println("Album  : " + nama);
         System.out.println("Artis  : " + artis);
@@ -45,15 +45,17 @@ public class Album {
         garis();
         for (int i = 0; i < daftarLagu.size(); i++) {
             Lagu l = daftarLagu.get(i);
-            System.out.printf("| %-3d | %-33s | %-6s |%n",
-                    (i + 1), l.getJudul(), l.getDurasiFormat());
+            System.out.printf("| %-3d | %-33s | %-6s |%n", (i + 1), l.getJudul(), l.getDurasiFormat());
         }
-    }    
-    public void garis() {
-        System.out.println("====================================");
+        garis();
     }
 
+    private void garis() {
+        System.out.println("+-----+-----------------------------------+--------+");
+    }
+
+    @Override
     public String toString() {
-        return nama + " - " + artis + " (" + tahun + ") ["+ daftarLagu.size() + " lagu]";
+        return nama + " - " + artis + " (" + tahun + ") [" + daftarLagu.size() + " lagu]";
     }
 }
