@@ -85,7 +85,7 @@ public class Playlist {
         return (current != null) ? current.data : null;
     }
 
-    // Konversi linked list ke ArrayList untuk kebutuhan lain (Bab 10)
+    // Konversi linked list ke ArrayList untuk kebutuhan lain 
     public ArrayList<Lagu> toDaftarLagu() {
         ArrayList<Lagu> list = new ArrayList<>();
         PlaylistNode curr = head;
