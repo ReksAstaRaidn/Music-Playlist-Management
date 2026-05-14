@@ -371,11 +371,16 @@ public class MainMusic {
         int sub = bacaInt();
 
         switch (sub) {
-            case 1: mediaPlayer.tampilkanRiwayat();  break;
-            case 2: mediaPlayer.tampilkanAntrian();  break;
-            case 3: mediaPlayer.kembali();           break;
-            case 4: mediaPlayer.maju();              break;
-            case 5: mediaPlayer.mainkanBerikutnya(); break;
+            case 1: mediaPlayer.tampilkanRiwayat();  
+                break;
+            case 2: mediaPlayer.tampilkanAntrian();  
+                break;
+            case 3: mediaPlayer.kembali();           
+                break;
+            case 4: mediaPlayer.maju();              
+                break;
+            case 5: mediaPlayer.mainkanBerikutnya(); 
+                break;
             default: System.out.println("Pilihan tidak valid.");
         }
     }
