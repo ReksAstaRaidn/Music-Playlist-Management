@@ -164,7 +164,7 @@ public class MainMusic {
         System.out.print("Pilih menu: ");
     }
 
-    //lihat lagu
+    //Menu 1: Lihat Lagu
     private static void menuLihatLagu() {
         System.out.println("\n--- LIHAT LAGU ---");
         System.out.println("1. Semua Lagu");
@@ -238,9 +238,7 @@ public class MainMusic {
         }
     }
 
-    // =========================================================
     //  MENU 2: BUAT PLAYLIST BARU
-    // =========================================================
     private static void menuBuatPlaylist() {
         System.out.println("\n--- BUAT PLAYLIST BARU ---");
         System.out.print("Masukkan nama playlist: ");
@@ -253,10 +251,7 @@ public class MainMusic {
         daftarPlaylist.add(pl);
         System.out.println("Playlist " + pl + " berhasil dibuat!");
     }
-
-    // =========================================================
     //  MENU 3: TAMBAH LAGU KE PLAYLIST
-    // =========================================================
     private static void menuTambahLaguKePlaylist() {
         System.out.println("\n--- TAMBAH LAGU KE PLAYLIST ---");
         if (daftarPlaylist.isEmpty()) {
@@ -305,9 +300,7 @@ public class MainMusic {
         System.out.println("Playlist " + playlist + " selesai diperbarui.");
     }
 
-    // =========================================================
     //  MENU 4: PUTAR PLAYLIST
-    // =========================================================
     private static void menuPutarPlaylist() {
         System.out.println("\n--- PUTAR PLAYLIST ---");
         if (daftarPlaylist.isEmpty()) {
@@ -357,9 +350,7 @@ public class MainMusic {
         mediaPlayer.mainkanBerikutnya();
     }
 
-    // =========================================================
     //  MENU 5: RIWAYAT DAN ANTRIAN
-    // =========================================================
     private static void menuRiwayatDanAntrian() {
         System.out.println("\n--- RIWAYAT & ANTRIAN PUTAR ---");
         System.out.println("1. Lihat Riwayat Putar");
@@ -385,9 +376,7 @@ public class MainMusic {
         }
     }
 
-    // =========================================================
     //  MENU 6: CARI LAGU (BINARY SEARCH - Bab 13)
-    // =========================================================
     private static void menuCariLagu() {
         System.out.println("\n--- CARI LAGU (Binary Search) ---");
         System.out.println("Catatan: pencarian dilakukan berdasarkan judul yang sudah diurutkan.");
@@ -444,9 +433,7 @@ public class MainMusic {
         return -1;
     }
 
-    // =========================================================
     //  MENU 7: URUTKAN LAGU (Bab 13: Sorting + Comparator)
-    // =========================================================
     private static void menuUrutkanLagu() {
         System.out.println("\n--- URUTKAN LAGU ---");
         System.out.println("Urutkan berdasarkan:");
@@ -490,9 +477,7 @@ public class MainMusic {
         }
     }
 
-    // =========================================================
     //  MENU 8: REKOMENDASI LAGU (Bab 19: Lambda & Stream)
-    // =========================================================
     private static void menuRekomendasiLagu() {
         System.out.println("\n--- REKOMENDASI LAGU ---");
         System.out.println("Genre tersedia: " + laguPerGenre.keySet());
@@ -504,7 +489,6 @@ public class MainMusic {
             return;
         }
 
-        // Bab 19: Stream + Lambda untuk filter dan sort
         List<Lagu> rekomendasi = semuaLagu.stream()
             .filter(l -> l.getGenre().equalsIgnoreCase(genreInput))
             .sorted(Comparator.comparing(Lagu::getJudul))
@@ -530,9 +514,7 @@ public class MainMusic {
         }
     }
 
-    // =========================================================
     //  MENU 9: KELOLA PLAYLIST
-    // =========================================================
     private static void menuKelolaPlaylist() {
         System.out.println("\n--- KELOLA PLAYLIST ---");
         if (daftarPlaylist.isEmpty()) {
@@ -592,7 +574,6 @@ public class MainMusic {
         }
     }
 
-    // Navigasi prev/next dalam custom linked list (Bab 15-16)
     private static void menuNavigasiPlaylist(Playlist playlist) {
         playlist.resetKeCurrent();
         boolean lanjut = true;
@@ -633,9 +614,7 @@ public class MainMusic {
         }
     }
 
-    // =========================================================
     //  MENU 10: MEDIA PLAYER
-    // =========================================================
     private static void menuMediaPlayer() {
         boolean kembali = false;
         while (!kembali) {
@@ -742,9 +721,7 @@ public class MainMusic {
         System.out.println(garisString());
     }
 
-    // =========================================================
     //  HELPER: Baca input integer dari user
-    // =========================================================
     private static int bacaInt() {
         try {
             String baris = scanner.nextLine().trim();
